@@ -28,7 +28,7 @@ public class Network {
     public User getUser(String name) {
 
         for (int i = 0; i < userCount; i++) {
-            if (users[i].getName().equals(name)) return users[i];
+            if (users[i].getName().toLowerCase().equals(name.toLowerCase())) return users[i];
         }
 
         return null;
