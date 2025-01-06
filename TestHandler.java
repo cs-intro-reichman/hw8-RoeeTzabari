@@ -302,17 +302,26 @@ public class TestHandler {
     }
 
     public boolean addFolloweeTest5(){
-        User alice = new User("Alice");
-        String expected = "true";
-        String actual = "";
-        try {
-            actual += (alice.addFollowee("Foo") && !alice.addFollowee("foo") && alice.getfCount() == 1 && alice.follows("Foo"));
-        } catch (Exception e) {
-            actual = TesterMessagesEnum.ERROR + e.getMessage();
-        }
-        return this.tester.test("Alice, getting started = false, try to add Followee Foo and foo", expected, actual);
-    }
 
+        User alice = new User("Alice");
+
+        String expected = "true";
+
+        String actual = "";
+
+        try {
+
+            actual += (alice.addFollowee("Foo") && !alice.addFollowee("foo") && alice.getfCount() == 1 && alice.follows("Foo"));
+
+        } catch (Exception e) {
+
+            actual = TesterMessagesEnum.ERROR + e.getMessage();
+
+        }
+
+        return this.tester.test("Alice, getting started = false, try to add Followee Foo and foo", expected, actual);
+
+    }
     // Improved removeFollowee Tests
     public void mainRemoveFolloweeTest() {
         this.tester.reset(TesterQuestionEnum.USER_REMOVE_FOLLOWEE);
