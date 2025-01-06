@@ -116,7 +116,7 @@ public class Network {
     public String toString() {
         String description = "Network:\n";
         for (int i = 0; i < userCount; i++) {
-            description += users[i] + "\n";
+            description += users[i] + " \n";
         }
         return description;
     }
