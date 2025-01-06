@@ -46,6 +46,7 @@ public class Network {
         if (userCount < users.length) {
             users[userCount] = new User(name);
             userCount++;
+            return true;
         }
         return false;
     }
@@ -57,11 +58,11 @@ public class Network {
         
         if (name1.equals(name2)) return false;
 
-        User user1 = getUser(name1);
-        User user2 = getUser(name2);
+        User userOne = getUser(name1);
+        User userTwo = getUser(name2);
 
-        if (user1 != null && user2 != null) {
-            return user1.addFollowee(name2);
+        if (userOne != null && userTwo != null) {
+            return userOne.addFollowee(name2);
         }
         return false;
     }
